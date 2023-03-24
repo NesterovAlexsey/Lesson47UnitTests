@@ -1,7 +1,22 @@
 //Задача 1
 //Напишите автотесты с использованием JUnit для задачи 1 из предыдущего домашнего задания.
 //
+//Создайте компаратор, который позволит сортировать книги по названию,
+//при одинаковых названиях - по автору (и там, и там - по алфавиту)
+//
 //Проверьте краевые случаи, предусмотрите разные варианты.
+
+//Test Plan:
+//1. Sort book by name
+//2. Sort book by author, if the name is equal
+//3. All books are equals
+//4. No books in the List
+//5. Book with empty name
+//6. Book with empty author
+//7. Book with 0 or Negative pages
+//8. Limit for maximal page numbers
+//9. Limit for maximal name Length
+//10. Limit for maximal author length
 
 import java.util.ArrayList;
 import java.util.Collections;
