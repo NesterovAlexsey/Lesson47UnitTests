@@ -4,19 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BookTest {
 
- //Test Plan:
+  //Test Plan:
 //+ 1. Sort book by name
 //+ 2. Sort book by author, if the name is equal
 // + Sort book, if name book and author is equil
-// 3. All books are equals
-//4. No books in the List
-//5. Book with empty name
-//6. Book with empty author
+// + 3. All books are equals
+//+ 4. No books in the List
+//+ 5. Book with empty name
+//+ 6. Book with empty author
 //7. Book with 0 or Negative pages
 //8. Limit for maximal page numbers
 //9. Limit for maximal name Length
@@ -24,7 +23,7 @@ public class BookTest {
 //11. Check NumberOfPagesComparator
 
   @Test
-  public void NameBookAuthorComparator(){
+  public void NameBookAuthorComparator() {
 //    arrange
     Book book1 = new Book("A", "A-Book", 100);
     Book book2 = new Book("C", "C-Book", 120);
@@ -54,9 +53,9 @@ public class BookTest {
   }
 
   @Test
-  public void CompareListWithNullBody(){
-    Book book1 = new Book(null, null, 0);
-    Book book2 = new Book(null, null, 0);
+  public void CompareListWithNullBody() {
+    Book book1 = new Book(null, null, 1);
+    Book book2 = new Book(null, null, 1);
     boolean exceptionThrow = false;
     try {
       List<Book> actual = new ArrayList<>();
@@ -72,6 +71,16 @@ public class BookTest {
     assertTrue(exceptionThrow);
   }
 
+  @Test
+  public void NegativePagesChecking() {
+    boolean exceptionForNegativePage = false;
+    try {
+      Book a = new Book("A", "B", 0);
+    } catch (IllegalArgumentException e) {
+      exceptionForNegativePage = true;
+    }
+    assertTrue(exceptionForNegativePage);
+  }
 }
 
 
