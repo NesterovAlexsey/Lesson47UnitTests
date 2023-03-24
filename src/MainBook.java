@@ -19,6 +19,16 @@ public class MainBook {
     myBestBooks.add(new Book("Достоевский", "Братья Карамазовы", 680));
     myBestBooks.add(new Book("Remark", "No change on the western front", 300));
 
+//    Book book1 = new Book(null, null, 0);
+//    Book book2 = new Book(null, null, 0);
+//    myBestBooks.add(book1);
+//    myBestBooks.add(book2);
+//    System.out.println(myBestBooks);
+
+    Collections.sort(myBestBooks);
+    showBookList(myBestBooks);
+
+
     System.out.println("Sort by Author(in alphabet):");
     Collections.sort(myBestBooks);
     showBookList(myBestBooks);

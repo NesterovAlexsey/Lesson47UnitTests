@@ -16,14 +16,13 @@ public class BookTest {
 //+ 4. No books in the List
 //+ 5. Book with empty name
 //+ 6. Book with empty author
-//7. Book with 0 or Negative pages
-//8. Limit for maximal page numbers
-//9. Limit for maximal name Length
-//10. Limit for maximal author length
-//11. Check NumberOfPagesComparator
+//+ 7. Book with 0 or Negative pages
+// ? 8. Limit for maximal page numbers
+// ? 9. Limit for maximal name Length
+// ? 10. Limit for maximal author length
 
   @Test
-  public void NameBookAuthorComparator() {
+  public void NameBookAuthorPageComparator() {
 //    arrange
     Book book1 = new Book("A", "A-Book", 100);
     Book book2 = new Book("C", "C-Book", 120);
