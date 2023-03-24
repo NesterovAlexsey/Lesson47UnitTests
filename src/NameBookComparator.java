@@ -7,6 +7,9 @@ public class NameBookComparator implements Comparator<Book> {
     if (!a.getBookName().equals(b.getBookName())) {
       return a.getBookName().compareTo(b.getBookName());
     }
-    return a.getAuthor().compareTo(b.getAuthor());
+    if (!a.getAuthor().equals(b.getAuthor())) {
+      return a.getAuthor().compareTo(b.getAuthor());
+    }
+    return a.getNumberOfPages() - b.getNumberOfPages();
   }
 }
