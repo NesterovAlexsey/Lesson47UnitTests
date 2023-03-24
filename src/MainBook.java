@@ -17,6 +17,7 @@
 //8. Limit for maximal page numbers
 //9. Limit for maximal name Length
 //10. Limit for maximal author length
+//11. Check NumberOfPagesComparator
 
 import java.util.ArrayList;
 import java.util.Collections;
